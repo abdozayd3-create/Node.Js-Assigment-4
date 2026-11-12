@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "b4e8935b-d19d-42a8-874f-b01d173fe3c2",
+		"name": "Assignment 4 - Retail Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Seed Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/seed-data",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["seed-data"]
+				}
+			}
+		},
+		{
+			"name": "2. Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ProductName\": \"Cheese\",\n  \"Price\": 30.00,\n  \"StockQuantity\": 25,\n  \"SupplierID\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["products"]
+				}
+			}
+		},
+		{
+			"name": "3. Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["products"]
+				}
+			}
+		},
+		{
+			"name": "4. Get Product By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["products", "1"]
+				}
+			}
+		},
+		{
+			"name": "5. Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ProductName\": \"Milk Updated\",\n  \"Price\": 18.00,\n  \"StockQuantity\": 45,\n  \"SupplierID\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["products", "1"]
+				}
+			}
+		},
+		{
+			"name": "6. Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["products", "1"]
+				}
+			}
+		},
+		{
+			"name": "7. Create Supplier",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"SupplierName\": \"FastSupply\",\n  \"ContactNumber\": \"01112223344\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/suppliers",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["suppliers"]
+				}
+			}
+		},
+		{
+			"name": "8. Get All Suppliers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/suppliers",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["suppliers"]
+				}
+			}
+		},
+		{
+			"name": "9. Update Supplier",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"SupplierName\": \"FreshFoods Updated\",\n  \"ContactNumber\": \"01009998877\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/suppliers/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["suppliers", "1"]
+				}
+			}
+		},
+		{
+			"name": "10. Delete Supplier",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/suppliers/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["suppliers", "1"]
+				}
+			}
+		},
+		{
+			"name": "11. Record Sale",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ProductID\": 2,\n  \"QuantitySold\": 3\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/sales",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["sales"]
+				}
+			}
+		},
+		{
+			"name": "12. Get All Sales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sales",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["sales"]
+				}
+			}
+		},
+		{
+			"name": "13. Get Sales By Product ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products/2/sales",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["products", "2", "sales"]
+				}
+			}
+		},
+		{
+			"name": "14. Update Bread Price",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/update-bread-price",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["update-bread-price"]
+				}
+			}
+		},
+		{
+			"name": "15. Delete Eggs",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/delete-eggs",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["delete-eggs"]
+				}
+			}
+		},
+		{
+			"name": "16. Report - Total Sold",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reports/total-sold",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["reports", "total-sold"]
+				}
+			}
+		},
+		{
+			"name": "17. Report - Highest Stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reports/highest-stock",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["reports", "highest-stock"]
+				}
+			}
+		},
+		{
+			"name": "18. Report - Suppliers Starting With F",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reports/suppliers-f",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["reports", "suppliers-f"]
+				}
+			}
+		},
+		{
+			"name": "19. Report - Never Sold Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reports/never-sold",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["reports", "never-sold"]
+				}
+			}
+		},
+		{
+			"name": "20. Report - Sales Details with Join",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reports/sales-details",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "3000",
+					"path": ["reports", "sales-details"]
+				}
+			}
+		}
+	]
+}
